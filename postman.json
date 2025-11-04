@@ -1,7 +1,7 @@
 {
   "info": {
     "name": "Image Overlay Service",
-    "description": "API collection for testing the image overlay service",
+    "description": "API collection for testing the image overlay service with multiple font options",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
@@ -34,7 +34,21 @@
       }
     },
     {
-      "name": "Add Quote Overlay",
+      "name": "List Available Fonts",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/fonts",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["fonts"]
+        }
+      }
+    },
+    {
+      "name": "Add Quote Overlay (Default Font)",
       "request": {
         "method": "POST",
         "header": [],
@@ -54,6 +68,396 @@
             {
               "key": "attribution",
               "value": "Steve Jobs",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/overlay",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["overlay"]
+        }
+      }
+    },
+    {
+      "name": "Playfair Display (Elegant Serif)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "image",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "quote",
+              "value": "The only way to do great work is to love what you do.",
+              "type": "text"
+            },
+            {
+              "key": "attribution",
+              "value": "Steve Jobs",
+              "type": "text"
+            },
+            {
+              "key": "font",
+              "value": "playfairdisplay",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/overlay",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["overlay"]
+        }
+      }
+    },
+    {
+      "name": "Merriweather (Readable Serif)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "image",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "quote",
+              "value": "In the middle of difficulty lies opportunity.",
+              "type": "text"
+            },
+            {
+              "key": "attribution",
+              "value": "Albert Einstein",
+              "type": "text"
+            },
+            {
+              "key": "font",
+              "value": "merriweather",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/overlay",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["overlay"]
+        }
+      }
+    },
+    {
+      "name": "Dancing Script (Elegant Cursive)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "image",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "quote",
+              "value": "Life is short, make it sweet.",
+              "type": "text"
+            },
+            {
+              "key": "attribution",
+              "value": "Unknown",
+              "type": "text"
+            },
+            {
+              "key": "font",
+              "value": "dancingscript",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/overlay",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["overlay"]
+        }
+      }
+    },
+    {
+      "name": "Open Sans (Clean Modern)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "image",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "quote",
+              "value": "Simplicity is the ultimate sophistication.",
+              "type": "text"
+            },
+            {
+              "key": "attribution",
+              "value": "Leonardo da Vinci",
+              "type": "text"
+            },
+            {
+              "key": "font",
+              "value": "opensans",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/overlay",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["overlay"]
+        }
+      }
+    },
+    {
+      "name": "Montserrat (Geometric Modern)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "image",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "quote",
+              "value": "Design is not just what it looks like. Design is how it works.",
+              "type": "text"
+            },
+            {
+              "key": "attribution",
+              "value": "Steve Jobs",
+              "type": "text"
+            },
+            {
+              "key": "font",
+              "value": "montserrat",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/overlay",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["overlay"]
+        }
+      }
+    },
+    {
+      "name": "Great Vibes (Calligraphy)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "image",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "quote",
+              "value": "Love is the beauty of the soul.",
+              "type": "text"
+            },
+            {
+              "key": "attribution",
+              "value": "Saint Augustine",
+              "type": "text"
+            },
+            {
+              "key": "font",
+              "value": "greatvibes",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/overlay",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["overlay"]
+        }
+      }
+    },
+    {
+      "name": "Pacifico (Fun Script)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "image",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "quote",
+              "value": "Life is better at the beach.",
+              "type": "text"
+            },
+            {
+              "key": "attribution",
+              "value": "Unknown",
+              "type": "text"
+            },
+            {
+              "key": "font",
+              "value": "pacifico",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/overlay",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["overlay"]
+        }
+      }
+    },
+    {
+      "name": "Cinzel (Roman Capitals)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "image",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "quote",
+              "value": "Veni, Vidi, Vici.",
+              "type": "text"
+            },
+            {
+              "key": "attribution",
+              "value": "Julius Caesar",
+              "type": "text"
+            },
+            {
+              "key": "font",
+              "value": "cinzel",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/overlay",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["overlay"]
+        }
+      }
+    },
+    {
+      "name": "Lora (Warm Serif)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "image",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "quote",
+              "value": "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
+              "type": "text"
+            },
+            {
+              "key": "attribution",
+              "value": "Ralph Waldo Emerson",
+              "type": "text"
+            },
+            {
+              "key": "font",
+              "value": "lora",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/overlay",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["overlay"]
+        }
+      }
+    },
+    {
+      "name": "Crimson Text (Literary)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "image",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "quote",
+              "value": "It is our choices that show what we truly are, far more than our abilities.",
+              "type": "text"
+            },
+            {
+              "key": "attribution",
+              "value": "J.K. Rowling",
+              "type": "text"
+            },
+            {
+              "key": "font",
+              "value": "crimsontext",
               "type": "text"
             }
           ]
