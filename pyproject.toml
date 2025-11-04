@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "image-overlay-service"
+version = "0.1.0"
+description = "A service to overlay quotes on images with translucent boxes"
+authors = ["jason <feedbacksciphi@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.104.1"
+uvicorn = {extras = ["standard"], version = "^0.24.0"}
+pillow = "^10.1.0"
+python-multipart = "^0.0.6"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+httpx = "^0.25.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

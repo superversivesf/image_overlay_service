@@ -1,0 +1,71 @@
+{
+  "info": {
+    "name": "Image Overlay Service",
+    "description": "API collection for testing the image overlay service",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["health"]
+        }
+      }
+    },
+    {
+      "name": "Root",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": [""]
+        }
+      }
+    },
+    {
+      "name": "Add Quote Overlay",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "image",
+              "type": "file",
+              "src": []
+            },
+            {
+              "key": "quote",
+              "value": "The only way to do great work is to love what you do.",
+              "type": "text"
+            },
+            {
+              "key": "attribution",
+              "value": "Steve Jobs",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/overlay",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["overlay"]
+        }
+      }
+    }
+  ]
+}
